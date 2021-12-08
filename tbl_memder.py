@@ -27,7 +27,7 @@ def insert_member():
     conn = getconn()
     cur = conn.cursor()
     sql = "INSERT INTO member(mid, passwd, name, age) VALUES (?, ?, ?, ?)"
-    cur.execute(sql, ('10002', 'm1234', '팥쥐', 19))
+    cur.execute(sql, ('20001', 'm1234', '흥부', 35))
     conn.commit()
     print("멤버 추가")
     conn.close()
@@ -36,14 +36,17 @@ def select_member():
     conn = getconn()
     cur = conn.cursor()
     sql = "SELECT * FROM member"
+    cur.execute(sql)
     rs = cur.fetchall() #DB에서 반환된 자료
     print(rs)
     for i in rs:
-        print(i[0])
+        print(i)
+        #print(i[0])
     conn.close()
 
 
 
 
 #create_table()  #호출
-insert_member()
+#insert_member()
+select_member()

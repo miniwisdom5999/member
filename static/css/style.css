@@ -27,3 +27,21 @@ section table th{background-color: #eee;}
 section .tbl_view{width: 450px;}
 section .tbl_view input{width: 200px; height: 30px}
 
+
+/* register 스타일 */
+section .join{width: 550px; margin: 0 auto;}
+section .join fieldset{border-redius: 4px;}
+section .join ul{list-style: none; padding: 10px;}
+section .join ul li{margin: 15px;}
+section .join ul label{width: 120px; float:left; text-align: right;}
+section .join ul input{width: 250px; height: 30px;
+ border-redius: 4px; border: 1px solid #555;}
+
+section .join ul input[type='submit']{width: 100px; height: 30px;}
+section .join ul input[type='reset']{width: 100px; height: 30px;}
+
+
+
+/* login 스타일 */
+section .join{width: 550px; margin: 0 auto;}
+section .join fieldset{border-redius: 4px;}
