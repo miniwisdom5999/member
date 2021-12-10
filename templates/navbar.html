@@ -1,17 +1,17 @@
 <header>
     <nav>
         <ul>
-            {% if session %} <!-- 세션이 있으면 -->
+        {% if session %} <!-- session이 있으면 -->
             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('logout') }}">로그아웃</a></li>
+            <li><a href="{{ url_for('logout') }}">({{ ssid }}님)로그아웃</a></li>
             <li><a href="{{ url_for('register') }}">회원가입</a></li>
             <li><a href="{{ url_for('memberlist') }}">회원목록</a></li>
-            {% else %}  <!-- 세션이 없으면 -->
+        {% else %}
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('login') }}">로그인</a></li>
             <li><a href="{{ url_for('register') }}">회원가입</a></li>
             <li><a href="{{ url_for('memberlist') }}">회원목록</a></li>
-            {% endif %}
+        {% endif %}
         </ul>
     </nav>
 </header>

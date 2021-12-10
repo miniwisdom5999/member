@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>회원 목록</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-
     <div id="container">
+        {% if ssid == null %} <!--session이 없다면 즉, 로그인하지 않았다면 -->
+        <script>
+            alert('먼저 로그인해 주세요');
+            location.href = '/login/';  //경로이동 객체(location.href)
+        </script>
+        {% endif %}
         {% include 'navbar.html' %}
         <section>
-            <h1>회원 목록.</h1>
+            <h1>회원 목록</h1>
             <table>
                 <tr>
                     <th>아이디</th><th>패스워드</th><th>이름</th><th>나이</th><th>가입일</th>
@@ -22,13 +27,11 @@
                     <td>{{ i[2] }}</td>
                     <td>{{ i[3] }}</td>
                     <td>{{ i[4] }}</td>
-
                 </tr>
                 {% endfor %}
 
             </table>
         </section>
     </div>
-
 </body>
 </html>
